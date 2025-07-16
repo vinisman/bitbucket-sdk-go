@@ -1,6 +1,7 @@
-# Go API client for openapi
+# Go API client for Bitbucket Data center
 
-This is the reference document for the Atlassian Bitbucket REST API. The REST API is for developers who want to: 
+This is the reference document and client for the Atlassian Bitbucket REST API generated using openapi-generator-cli.  
+The REST API is for developers who want to: 
 
  - integrate Bitbucket with other applications;
 
@@ -31,7 +32,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```go
-import openapi "github.com/GIT_USER_ID/GIT_REPO_ID"
+import openapi "github.com/vinisman/bitbucket-sdk-go"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:

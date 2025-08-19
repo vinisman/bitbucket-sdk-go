@@ -19,6 +19,7 @@ var _ MappedNullable = &RestWebhook{}
 
 // RestWebhook struct for RestWebhook
 type RestWebhook struct {
+	Id *int32 `json:"id,omitempty"`
 	Active *bool `json:"active,omitempty"`
 	Configuration map[string]interface{} `json:"configuration,omitempty"`
 	Credentials *RestWebhookCredentials `json:"credentials,omitempty"`

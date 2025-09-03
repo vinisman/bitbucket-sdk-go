@@ -346,6 +346,11 @@ func (o RestWebhook) MarshalJSON() ([]byte, error) {
 
 func (o RestWebhook) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+
+	if !IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+
 	if !IsNil(o.Active) {
 		toSerialize["active"] = o.Active
 	}

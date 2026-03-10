@@ -29,18 +29,18 @@ import (
 // @param projectKey Ключ проекта.
 // @param repositorySlug Slug репозитория.
 // @param restrictions Список ограничений для создания.
-// @return RestRefRestriction
+// @return []RestRefRestriction
 func (a *RepositoryAPIService) CreateRestrictions1WithUserNames(
 	ctx context.Context,
 	projectKey string,
 	repositorySlug string,
 	restrictions []RestRefRestrictionCreate,
-) (*RestRefRestriction, *http.Response, error) {
+) ([]RestRefRestriction, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *RestRefRestriction
+		localVarReturnValue  []RestRefRestriction
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(ctx, "RepositoryAPIService.CreateRestrictions1")
